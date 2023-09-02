@@ -22,7 +22,7 @@ public class guessANumber {
             in.nextLine(); //scanner bug
             if (userGuess < targetNumber) {
                 System.out.println("Higher!");
-                score--;                        // ++ adds 1 to the score
+                score--;                        // -- subtracts 1 from the score
                 System.out.println("Lives left: " + score);
             } else if (userGuess > targetNumber) {
                 System.out.println("Lower!");
@@ -38,7 +38,7 @@ public class guessANumber {
                 System.out.println("You've run out of guesses! Better luck next time :)");
                 System.out.println("The correct number is: " + targetNumber);
             }
-            if (score == 1) {
+            if (score == 1) {  // on the last guess players will get a hint
                 if (targetNumber % 2 == 0) {  // means the number is even
 
                     System.out.println("Hint: The number is even");
